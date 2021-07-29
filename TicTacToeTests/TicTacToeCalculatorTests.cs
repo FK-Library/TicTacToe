@@ -262,5 +262,22 @@ namespace TicTacToeTests
             //Assert
             Assert.AreEqual(expectedWiner, actual);
         }
+
+        //Null 
+        [TestCategory("NoWin")]
+        [DataRow("x|o|x|o|x|o|x|o|x", "noWin")]
+        [DataRow("x|o||o|x|o|x|o|x", "noWin")]
+        [TestMethod]
+        public void Play_Always_ReportsNoWinCondition(string inputs, string expectedWiner)
+        {
+            //Arrange
+            var ticTacToe = new TicTacToeCalculator();
+
+            //Act
+            var actual = ticTacToe.Play(inputs);
+
+            //Assert
+            Assert.AreEqual(expectedWiner, actual);
+        }
     }
 }

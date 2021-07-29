@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace TicTacToe
 {
     public class TicTacToeCalculator : ITicTacToeCalculator
     {
-        //private List<IRules> rules;
-        //public TicTacToeCalculator(List<IRules> rules)
-        //{
-        //    this.rules = rules;
-        //}
+       // to do -List of delimiters can be added here
         public string Play(string inputs)
         {
             var noWin = "NoWin";
@@ -18,7 +15,12 @@ namespace TicTacToe
 
             if (!String.IsNullOrEmpty(inputs)) 
             {
-                var inputArray = inputs.Split('|');
+                //validate
+                var inputArray = inputs.Split('|'); // to do- add other delimiters rather than only '|'
+
+                //to do - validate
+                //
+
                 //apply rules
                 //horizontal
                 if (inputArray[0] == inputArray[1]
