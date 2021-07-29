@@ -8,7 +8,21 @@ namespace TicTacToeTests
     {
         [DataRow("x,x,x,o,o,o,x,o,x","x")]
         [TestMethod]
-        public void TestMethod1(string inputs, string expectedWiner)
+        public void Play_xfilled1And2And3_xWins(string inputs, string expectedWiner)
+        {
+            //Arrange
+            var ticTacToe = new TicTacToeCalculator();
+
+            //Act
+            var actual = ticTacToe.Play(inputs);
+
+            //Assert
+            Assert.AreEqual(expectedWiner, actual);
+        }
+
+        [DataRow("o,o,o,,x,x,x,o,x,o,", "o")]
+        [TestMethod]
+        public void Play_ofilled1And2And3_oWins(string inputs, string expectedWiner)
         {
             //Arrange
             var ticTacToe = new TicTacToeCalculator();
