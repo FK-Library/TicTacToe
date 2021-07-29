@@ -246,5 +246,21 @@ namespace TicTacToeTests
             //Assert
             Assert.AreEqual(expectedWiner, actual);
         }
+
+        //Null 
+        [TestCategory("Null")]
+        [DataRow("||||||||", "Invalid Empty Input")]
+        [TestMethod]
+        public void Play_Always_ReportsEmptyInput(string inputs, string expectedWiner)
+        {
+            //Arrange
+            var ticTacToe = new TicTacToeCalculator();
+
+            //Act
+            var actual = ticTacToe.Play(inputs);
+
+            //Assert
+            Assert.AreEqual(expectedWiner, actual);
+        }
     }
 }

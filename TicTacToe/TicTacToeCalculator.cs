@@ -19,7 +19,7 @@ namespace TicTacToe
 
             //apply rules
             //horizontal
-            if (inputArray[0] == inputArray[1] 
+            if (inputArray[0] == inputArray[1]
                 && inputArray[1] == inputArray[2] 
                 && !String.IsNullOrEmpty(inputArray[0]))
                 return inputArray[0];
@@ -61,7 +61,7 @@ namespace TicTacToe
                 && !String.IsNullOrEmpty(inputArray[2]))
                 return inputArray[2];
 
-            return winner;
+            return  winner;
         }
     }
 }
