@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace TicTacToe
 {
@@ -19,8 +20,17 @@ namespace TicTacToe
                 var inputArray = inputs.Split('|'); // to do- add other delimiters rather than only '|'
 
                 //to do - validate
-                //
+                // 
+                string pattern = @"[x|X|o|O]";
+                Regex rg = new Regex(pattern);
 
+                foreach (var input in inputArray)
+                {
+                    var matched = rg.Matches(input);
+                    if (matched.Count==0)
+                        return "Invalid Input";
+                }
+                
                 //apply rules
                 //horizontal
                 if (inputArray[0] == inputArray[1]

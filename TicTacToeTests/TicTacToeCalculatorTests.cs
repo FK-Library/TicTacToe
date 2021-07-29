@@ -279,5 +279,22 @@ namespace TicTacToeTests
             //Assert
             Assert.AreEqual(expectedWiner, actual);
         }
+
+        //Invalid Input 
+        [TestCategory("InvalidInput")]
+        [DataRow("o|y|o|x|x|o|x|o|x", "Invalid Input")]
+        [DataRow("x|o|x|0|o|x|o|x|o", "Invalid Input")]
+        [TestMethod]
+        public void Play_Always_ReportsInValidInput(string inputs, string expectedWiner)
+        {
+            //Arrange
+            var ticTacToe = new TicTacToeCalculator();
+
+            //Act
+            var actual = ticTacToe.Play(inputs);
+
+            //Assert
+            Assert.AreEqual(expectedWiner, actual);
+        }
     }
 }
