@@ -186,5 +186,65 @@ namespace TicTacToeTests
             //Assert
             Assert.AreEqual(expectedWiner, actual);
         }
+
+        //Diagonal
+        [TestCategory("Diagonal")]
+        [DataRow("x|||x|||x||", "x")]
+        [TestMethod]
+        public void Play_xLeftDiagonalLine_xWins(string inputs, string expectedWiner)
+        {
+            //Arrange
+            var ticTacToe = new TicTacToeCalculator();
+
+            //Act
+            var actual = ticTacToe.Play(inputs);
+
+            //Assert
+            Assert.AreEqual(expectedWiner, actual);
+        }
+
+        [TestCategory("Diagonal")]
+        [DataRow("o|||o|||o||", "o")]
+        [TestMethod]
+        public void Play_oLefttDiagonalLine_oWins(string inputs, string expectedWiner)
+        {
+            //Arrange
+            var ticTacToe = new TicTacToeCalculator();
+
+            //Act
+            var actual = ticTacToe.Play(inputs);
+
+            //Assert
+            Assert.AreEqual(expectedWiner, actual);
+        }
+        [TestCategory("Diagonal")]
+        [DataRow("||x|||x|||x", "x")]
+        [TestMethod]
+        public void Play_xRightDiagonalLine_xWins(string inputs, string expectedWiner)
+        {
+            //Arrange
+            var ticTacToe = new TicTacToeCalculator();
+
+            //Act
+            var actual = ticTacToe.Play(inputs);
+
+            //Assert
+            Assert.AreEqual(expectedWiner, actual);
+        }
+
+        [TestCategory("Diagonal")]
+        [DataRow("||o|||o|||o", "o")]
+        [TestMethod]
+        public void Play_oRightDiagonalLine_oWins(string inputs, string expectedWiner)
+        {
+            //Arrange
+            var ticTacToe = new TicTacToeCalculator();
+
+            //Act
+            var actual = ticTacToe.Play(inputs);
+
+            //Assert
+            Assert.AreEqual(expectedWiner, actual);
+        }
     }
 }
