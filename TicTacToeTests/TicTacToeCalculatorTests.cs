@@ -249,7 +249,7 @@ namespace TicTacToeTests
 
         //Null 
         [TestCategory("Null")]
-        [DataRow("||||||||", "Invalid Empty Input")]
+        [DataRow("", "Invalid Empty Input")]
         [TestMethod]
         public void Play_Always_ReportsEmptyInput(string inputs, string expectedWiner)
         {
