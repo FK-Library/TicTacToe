@@ -50,6 +50,17 @@ namespace TicTacToe
                 && !String.IsNullOrEmpty(inputArray[2]))
                 return inputArray[2];
 
+            //Diagonal
+            if (inputArray[0] == inputArray[4]
+                && inputArray[4] == inputArray[8]
+                && !String.IsNullOrEmpty(inputArray[0]))
+                return inputArray[0];
+
+            if (inputArray[2] == inputArray[4]
+                && inputArray[4] == inputArray[6]
+                && !String.IsNullOrEmpty(inputArray[2]))
+                return inputArray[2];
+
             return winner;
         }
     }
