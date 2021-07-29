@@ -19,8 +19,13 @@ namespace TicTacToe
 
             //apply rules
             if (inputArray[0] == inputArray[1] && inputArray[1] == inputArray[2])
-                winner = inputArray[0];
+                return inputArray[0];
+            
+            if (inputArray[3] == inputArray[4] && inputArray[4] == inputArray[5])
+                return inputArray[3];
 
+            if (inputArray[6] == inputArray[7] && inputArray[7] == inputArray[8])
+                return inputArray[6];
 
             return winner;
         }
