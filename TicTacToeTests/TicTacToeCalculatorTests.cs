@@ -68,7 +68,7 @@ namespace TicTacToeTests
         }
 
         [TestCategory("Horizontal")]
-        [DataRow("|o||o||o|x|x|x", "x")]
+        [DataRow("-|o|-|o|-|o|x|x|x", "x")]
         [TestMethod]
         public void Play_xThirdHorizontalLine_xWins(string inputs, string expectedWiner)
         {
@@ -82,7 +82,7 @@ namespace TicTacToeTests
             Assert.AreEqual(expectedWiner, actual);
         }
         [TestCategory("Horizontal")]
-        [DataRow("|x||x||x|o|o|o", "o")]
+        [DataRow("-|x|-|x|-|x|o|o|o", "o")]
         [TestMethod]
         public void Play_oThirdtHorizontalLine_oWins(string inputs, string expectedWiner)
         {
@@ -98,7 +98,7 @@ namespace TicTacToeTests
 
         //vertical--------------
         [TestCategory("Vertical")]
-        [DataRow("x|||x|||x||", "x")]
+        [DataRow("x|-|-|x|-|-|x|-|-", "x")]
         [TestMethod]
         public void Play_xFirstVerticalLine_xWins(string inputs, string expectedWiner)
         {
@@ -113,7 +113,7 @@ namespace TicTacToeTests
         }
 
         [TestCategory("Vertical")]
-        [DataRow("o|||o|||o||", "o")]
+        [DataRow("o|-|-|o|-|-|o|-|-", "o")]
         [TestMethod]
         public void Play_oFirstVerticalLine_oWins(string inputs, string expectedWiner)
         {
@@ -128,7 +128,7 @@ namespace TicTacToeTests
         }
 
         [TestCategory("Vertical")]
-        [DataRow("|x|||x|||x|", "x")]
+        [DataRow("-|x|-|-|x|-|-|x|-", "x")]
         [TestMethod]
         public void Play_xSecondVerticalLine_xWins(string inputs, string expectedWiner)
         {
@@ -143,7 +143,7 @@ namespace TicTacToeTests
         }
 
         [TestCategory("Vertical")]
-        [DataRow("|o|||o|||o|", "o")]
+        [DataRow("-|o|-|-|o|-|-|o|-", "o")]
         [TestMethod]
         public void Play_oSecondtVerticalLine_oWins(string inputs, string expectedWiner)
         {
@@ -158,7 +158,7 @@ namespace TicTacToeTests
         }
 
         [TestCategory("Vertical")]
-        [DataRow("||x|||x|||x", "x")]
+        [DataRow("-|-|x|-|-|x|-|-|x", "x")]
         [TestMethod]
         public void Play_xThirdVerticalLine_xWins(string inputs, string expectedWiner)
         {
@@ -173,7 +173,7 @@ namespace TicTacToeTests
         }
 
         [TestCategory("Vertical")]
-        [DataRow("||o|||o|||o", "o")]
+        [DataRow("-|-|o|-|-|o|-|-|o", "o")]
         [TestMethod]
         public void Play_oThirdVerticalLine_oWins(string inputs, string expectedWiner)
         {
@@ -189,7 +189,7 @@ namespace TicTacToeTests
 
         //Diagonal
         [TestCategory("Diagonal")]
-        [DataRow("x||||x||||x", "x")]
+        [DataRow("x|-|-|-|x|-|-|-|x", "x")]
         [TestMethod]
         public void Play_xLeftDiagonalLine_xWins(string inputs, string expectedWiner)
         {
@@ -204,7 +204,7 @@ namespace TicTacToeTests
         }
 
         [TestCategory("Diagonal")]
-        [DataRow("o||||o||||o", "o")]
+        [DataRow("o|-|-|-|o|-|-|-|o", "o")]
         [TestMethod]
         public void Play_oLefttDiagonalLine_oWins(string inputs, string expectedWiner)
         {
@@ -218,7 +218,7 @@ namespace TicTacToeTests
             Assert.AreEqual(expectedWiner, actual);
         }
         [TestCategory("Diagonal")]
-        [DataRow("||x||x||x||", "x")]
+        [DataRow("-|-|x|-|x|-|x|-|-", "x")]
         [TestMethod]
         public void Play_xRightDiagonalLine_xWins(string inputs, string expectedWiner)
         {
@@ -233,7 +233,7 @@ namespace TicTacToeTests
         }
 
         [TestCategory("Diagonal")]
-        [DataRow("||o||o||o||", "o")]
+        [DataRow("-|-|o|-|o|-|o|-|-", "o")]
         [TestMethod]
         public void Play_oRightDiagonalLine_oWins(string inputs, string expectedWiner)
         {
@@ -249,7 +249,7 @@ namespace TicTacToeTests
 
         //Null 
         [TestCategory("Null")]
-        [DataRow("", "Invalid Empty Input")]
+        [DataRow("", "Invalid Input")]
         [TestMethod]
         public void Play_Always_ReportsEmptyInput(string inputs, string expectedWiner)
         {

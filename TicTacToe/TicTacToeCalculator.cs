@@ -12,25 +12,16 @@ namespace TicTacToe
         public string Play(string inputs)
         {
             var noWin = "NoWin";
-            //inputs.Split('|').Length >0)
+            
 
-            if (!String.IsNullOrEmpty(inputs)) 
-            {
+            if (!this.Validate(inputs))
+                return "Invalid Input";
+
+            inputs = inputs.Replace("-", "");
+
                 //validate
                 var inputArray = inputs.Split('|'); // to do- add other delimiters rather than only '|'
 
-                //to do - validate
-                // 
-                string pattern = @"[x|X|o|O]";
-                Regex rg = new Regex(pattern);
-
-                foreach (var input in inputArray)
-                {
-                    var matched = rg.Matches(input);
-                    if (matched.Count==0)
-                        return "Invalid Input";
-                }
-                
                 //apply rules
                 //horizontal
                 if (inputArray[0] == inputArray[1]
@@ -74,19 +65,39 @@ namespace TicTacToe
                     && inputArray[4] == inputArray[6]
                     && !String.IsNullOrEmpty(inputArray[2]))
                     return inputArray[2];
-            }
-            else
-            {
-                return "Invalid Empty Input";
-            }
 
             return noWin;
+        }
+
+        private bool Validate(string input)
+        {
+            //string pattern = @"[x|X|o|O|\-]";
+            //Regex rg = new Regex(pattern);
+            //var matched = rg.Matches(input);
+            //if (matched.Count != 9)
+            //    return false;
+
+            if (string.IsNullOrEmpty(input))
+                return false;
+
+            input = input.Replace("x","");
+            input = input.Replace("X","");
+            input = input.Replace("o", "");
+            input = input.Replace("O", "");
+            input = input.Replace("|", "");
+            input = input.Replace("-", "");
+
+            if (input.Count() > 0)
+                return false;
+
+
+            return true;
         }
     }
 }
 /*
  * Lets Assume:
- * 1|2|3
- * 4|5|6
- * 7|8|9 
+ * 0|1|2
+ * 3|4|5
+ * 6|7|8
  */
