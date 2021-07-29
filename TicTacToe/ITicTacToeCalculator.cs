@@ -7,6 +7,6 @@ namespace TicTacToe
     public interface ITicTacToeCalculator
     {
 
-        string Play();
+        string Play(string inputs);
     }
 }
