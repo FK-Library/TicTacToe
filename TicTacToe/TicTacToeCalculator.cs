@@ -13,16 +13,16 @@ namespace TicTacToe
         //}
         public string Play(string inputs)
         {
+            string winner = null;
             //input to array
-            var inputArray = inputs.Split(',');
+            var inputArray = inputs.Split('|');
 
             //apply rules
-            if (true)
-            {
+            if (inputArray[0] == inputArray[1] && inputArray[1] == inputArray[2])
+                winner = inputArray[0];
 
-            }
-                       
-            return "x";
+
+            return winner;
         }
     }
 }

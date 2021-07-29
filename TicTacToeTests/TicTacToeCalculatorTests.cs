@@ -6,9 +6,9 @@ namespace TicTacToeTests
     [TestClass]
     public class TicTacToeCalculatorTests
     {
-        [DataRow("x,1|x,2|x,3|o,4|o,5|o,6|x,7|o,8|x,9","x")]
+        [DataRow("x|x|x|o|o|o|x|o|x","x")]
         [TestMethod]
-        public void Play_xfilled1And2And3_xWins(string inputs, string expectedWiner)
+        public void Play_xFirstLine_xWins(string inputs, string expectedWiner)
         {
             //Arrange
             var ticTacToe = new TicTacToeCalculator();
@@ -20,9 +20,9 @@ namespace TicTacToeTests
             Assert.AreEqual(expectedWiner, actual);
         }
 
-        [DataRow("o,1|o,2|o,3|x,4|x,5|x,6|o,7|x,8|o,9", "o")]
+        [DataRow("o|o|o|x|x|x|o|x|o", "o")]
         [TestMethod]
-        public void Play_ofilled1And2And3_oWins(string inputs, string expectedWiner)
+        public void Play_oFirstLine_oWins(string inputs, string expectedWiner)
         {
             //Arrange
             var ticTacToe = new TicTacToeCalculator();
