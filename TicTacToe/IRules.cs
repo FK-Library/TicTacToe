@@ -4,9 +4,9 @@ using System.Text;
 
 namespace TicTacToe
 {
-    public interface ITicTacToeCalculator
+    public interface IRules
     {
-
-        string Play();
+        bool CanApply();
+        string Apply();
     }
 }
