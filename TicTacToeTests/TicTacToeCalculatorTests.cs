@@ -263,10 +263,10 @@ namespace TicTacToeTests
             Assert.AreEqual(expectedWiner, actual);
         }
 
-        //Null 
+        //NoWin 
         [TestCategory("NoWin")]
-        [DataRow("x|o|x|o|x|o|x|o|x", "noWin")]
-        [DataRow("x|o||o|x|o|x|o|x", "noWin")]
+        [DataRow("o|x|o|x|x|o|x|o|x", "NoWin")]
+        [DataRow("x|o|x|o|o|x|o|x|o", "NoWin")]
         [TestMethod]
         public void Play_Always_ReportsNoWinCondition(string inputs, string expectedWiner)
         {
