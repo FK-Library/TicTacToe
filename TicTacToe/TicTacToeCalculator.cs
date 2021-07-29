@@ -13,9 +13,22 @@ namespace TicTacToe
         //}
         public string Play(string inputs)
         {
-            //throw new NotImplementedException();
+            //input to array
+            var inputArray = inputs.Split(',');
 
+            //apply rules
+            if (true)
+            {
+
+            }
+                       
             return "x";
         }
     }
 }
+/*
+ * Lets Assume:
+ * 1|2|3
+ * 4|5|6
+ * 7|8|9 
+ */
