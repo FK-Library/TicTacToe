@@ -158,9 +158,9 @@ namespace TicTacToeTests
         }
 
         [TestCategory("Vertical")]
-        [DataRow("||o|||o|||o", "o")]
+        [DataRow("||x|||x|||x", "x")]
         [TestMethod]
-        public void Play_oThirdVerticalLine_oWins(string inputs, string expectedWiner)
+        public void Play_xThirdVerticalLine_xWins(string inputs, string expectedWiner)
         {
             //Arrange
             var ticTacToe = new TicTacToeCalculator();
@@ -173,9 +173,9 @@ namespace TicTacToeTests
         }
 
         [TestCategory("Vertical")]
-        [DataRow("o|o|x|x|x|x|o|o|x", "x")]
+        [DataRow("||o|||o|||o", "o")]
         [TestMethod]
-        public void Play_xThirdVerticalLine_xWins(string inputs, string expectedWiner)
+        public void Play_oThirdVerticalLine_oWins(string inputs, string expectedWiner)
         {
             //Arrange
             var ticTacToe = new TicTacToeCalculator();
