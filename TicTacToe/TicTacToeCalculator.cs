@@ -8,6 +8,11 @@ namespace TicTacToe
 {
     public class TicTacToeCalculator : ITicTacToeCalculator
     {
+        private IPrint Print;
+        public TicTacToeCalculator(IPrint Print)
+        {
+            this.Print = Print;
+        }
        // to do -List of delimiters can be added here
         public string Play(string inputs)
         {
@@ -69,19 +74,25 @@ namespace TicTacToe
             return noWin;
         }
 
+        private void PrintResult(string input, IPrint print)
+        {
+            print.PrintResult(input);
+        }
+
         private bool Validate(string input)
         {
-            //string pattern = @"[x|X|o|O|\-]";
+            //string pattern = @"[[xXoO\-\|] ]*";
             //Regex rg = new Regex(pattern);
             //var matched = rg.Matches(input);
             //if (matched.Count != 9)
             //    return false;
 
+
             if (string.IsNullOrEmpty(input))
                 return false;
 
-            input = input.Replace("x","");
-            input = input.Replace("X","");
+            input = input.Replace("x", "");
+            input = input.Replace("X", "");
             input = input.Replace("o", "");
             input = input.Replace("O", "");
             input = input.Replace("|", "");
@@ -89,7 +100,6 @@ namespace TicTacToe
 
             if (input.Count() > 0)
                 return false;
-
 
             return true;
         }

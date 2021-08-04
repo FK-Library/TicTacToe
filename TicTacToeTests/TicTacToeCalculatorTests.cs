@@ -13,7 +13,8 @@ namespace TicTacToeTests
         public void Play_xFirstLine_xWins(string inputs, string expectedWiner)
         {
             //Arrange
-            var ticTacToe = new TicTacToeCalculator();
+            var printResult = new Print();
+            var ticTacToe = new TicTacToeCalculator(printResult);
 
             //Act
             var actual = ticTacToe.Play(inputs);
@@ -28,7 +29,8 @@ namespace TicTacToeTests
         public void Play_oFirstLine_oWins(string inputs, string expectedWiner)
         {
             //Arrange
-            var ticTacToe = new TicTacToeCalculator();
+            var printResult = new Print();
+            var ticTacToe = new TicTacToeCalculator(printResult);
 
             //Act
             var actual = ticTacToe.Play(inputs);
@@ -43,7 +45,8 @@ namespace TicTacToeTests
         public void Play_xSecondHorizontalLine_xWins(string inputs, string expectedWiner)
         {
             //Arrange
-            var ticTacToe = new TicTacToeCalculator();
+            var printResult = new Print();
+            var ticTacToe = new TicTacToeCalculator(printResult);
 
             //Act
             var actual = ticTacToe.Play(inputs);
@@ -58,7 +61,8 @@ namespace TicTacToeTests
         public void Play_oSecondtHorizontalLine_oWins(string inputs, string expectedWiner)
         {
             //Arrange
-            var ticTacToe = new TicTacToeCalculator();
+            var printResult = new Print();
+            var ticTacToe = new TicTacToeCalculator(printResult);
 
             //Act
             var actual = ticTacToe.Play(inputs);
@@ -73,7 +77,8 @@ namespace TicTacToeTests
         public void Play_xThirdHorizontalLine_xWins(string inputs, string expectedWiner)
         {
             //Arrange
-            var ticTacToe = new TicTacToeCalculator();
+            var printResult = new Print();
+            var ticTacToe = new TicTacToeCalculator(printResult);
 
             //Act
             var actual = ticTacToe.Play(inputs);
@@ -87,7 +92,8 @@ namespace TicTacToeTests
         public void Play_oThirdtHorizontalLine_oWins(string inputs, string expectedWiner)
         {
             //Arrange
-            var ticTacToe = new TicTacToeCalculator();
+            var printResult = new Print();
+            var ticTacToe = new TicTacToeCalculator(printResult);
 
             //Act
             var actual = ticTacToe.Play(inputs);
@@ -103,7 +109,8 @@ namespace TicTacToeTests
         public void Play_xFirstVerticalLine_xWins(string inputs, string expectedWiner)
         {
             //Arrange
-            var ticTacToe = new TicTacToeCalculator();
+            var printResult = new Print();
+            var ticTacToe = new TicTacToeCalculator(printResult);
 
             //Act
             var actual = ticTacToe.Play(inputs);
@@ -118,7 +125,8 @@ namespace TicTacToeTests
         public void Play_oFirstVerticalLine_oWins(string inputs, string expectedWiner)
         {
             //Arrange
-            var ticTacToe = new TicTacToeCalculator();
+            var printResult = new Print();
+            var ticTacToe = new TicTacToeCalculator(printResult);
 
             //Act
             var actual = ticTacToe.Play(inputs);
@@ -133,7 +141,8 @@ namespace TicTacToeTests
         public void Play_xSecondVerticalLine_xWins(string inputs, string expectedWiner)
         {
             //Arrange
-            var ticTacToe = new TicTacToeCalculator();
+            var printResult = new Print();
+            var ticTacToe = new TicTacToeCalculator(printResult);
 
             //Act
             var actual = ticTacToe.Play(inputs);
@@ -148,7 +157,8 @@ namespace TicTacToeTests
         public void Play_oSecondtVerticalLine_oWins(string inputs, string expectedWiner)
         {
             //Arrange
-            var ticTacToe = new TicTacToeCalculator();
+            var printResult = new Print();
+            var ticTacToe = new TicTacToeCalculator(printResult);
 
             //Act
             var actual = ticTacToe.Play(inputs);
@@ -163,7 +173,8 @@ namespace TicTacToeTests
         public void Play_xThirdVerticalLine_xWins(string inputs, string expectedWiner)
         {
             //Arrange
-            var ticTacToe = new TicTacToeCalculator();
+            var printResult = new Print();
+            var ticTacToe = new TicTacToeCalculator(printResult);
 
             //Act
             var actual = ticTacToe.Play(inputs);
@@ -178,7 +189,8 @@ namespace TicTacToeTests
         public void Play_oThirdVerticalLine_oWins(string inputs, string expectedWiner)
         {
             //Arrange
-            var ticTacToe = new TicTacToeCalculator();
+            var printResult = new Print();
+            var ticTacToe = new TicTacToeCalculator(printResult);
 
             //Act
             var actual = ticTacToe.Play(inputs);
@@ -194,7 +206,8 @@ namespace TicTacToeTests
         public void Play_xLeftDiagonalLine_xWins(string inputs, string expectedWiner)
         {
             //Arrange
-            var ticTacToe = new TicTacToeCalculator();
+            var printResult = new Print();
+            var ticTacToe = new TicTacToeCalculator(printResult);
 
             //Act
             var actual = ticTacToe.Play(inputs);
@@ -209,7 +222,8 @@ namespace TicTacToeTests
         public void Play_oLefttDiagonalLine_oWins(string inputs, string expectedWiner)
         {
             //Arrange
-            var ticTacToe = new TicTacToeCalculator();
+            var printResult = new Print();
+            var ticTacToe = new TicTacToeCalculator(printResult);
 
             //Act
             var actual = ticTacToe.Play(inputs);
@@ -223,7 +237,8 @@ namespace TicTacToeTests
         public void Play_xRightDiagonalLine_xWins(string inputs, string expectedWiner)
         {
             //Arrange
-            var ticTacToe = new TicTacToeCalculator();
+            var printResult = new Print();
+            var ticTacToe = new TicTacToeCalculator(printResult);
 
             //Act
             var actual = ticTacToe.Play(inputs);
@@ -238,7 +253,8 @@ namespace TicTacToeTests
         public void Play_oRightDiagonalLine_oWins(string inputs, string expectedWiner)
         {
             //Arrange
-            var ticTacToe = new TicTacToeCalculator();
+            var printResult = new Print();
+            var ticTacToe = new TicTacToeCalculator(printResult);
 
             //Act
             var actual = ticTacToe.Play(inputs);
@@ -254,7 +270,8 @@ namespace TicTacToeTests
         public void Play_Always_ReportsEmptyInput(string inputs, string expectedWiner)
         {
             //Arrange
-            var ticTacToe = new TicTacToeCalculator();
+            var printResult = new Print();
+            var ticTacToe = new TicTacToeCalculator(printResult);
 
             //Act
             var actual = ticTacToe.Play(inputs);
@@ -271,7 +288,8 @@ namespace TicTacToeTests
         public void Play_Always_ReportsNoWinCondition(string inputs, string expectedWiner)
         {
             //Arrange
-            var ticTacToe = new TicTacToeCalculator();
+            var printResult = new Print();
+            var ticTacToe = new TicTacToeCalculator(printResult);
 
             //Act
             var actual = ticTacToe.Play(inputs);
@@ -288,13 +306,30 @@ namespace TicTacToeTests
         public void Play_Always_ReportsInValidInput(string inputs, string expectedWiner)
         {
             //Arrange
-            var ticTacToe = new TicTacToeCalculator();
+            var printResult = new Print();
+            var ticTacToe = new TicTacToeCalculator(printResult);
 
             //Act
             var actual = ticTacToe.Play(inputs);
 
             //Assert
             Assert.AreEqual(expectedWiner, actual);
+        }
+
+        [TestCategory("Print Results")]
+        [DataRow("o|o|o|x|x|o|x|o|x")]
+        [TestMethod]
+        public void Play_Always_PrintsOutput(string inputs)
+        {
+            //Arrange
+            var printResult = new Print();
+            var ticTacToe = new TicTacToeCalculator(printResult);
+
+            //Act
+            var actual = ticTacToe.Play(inputs);
+
+            //Assert
+            //Assert.AreEqual(expectedWiner, actual);
         }
     }
 }
