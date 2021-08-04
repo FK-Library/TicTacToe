@@ -341,8 +341,7 @@ namespace TicTacToeTests
             //Arrange
             var printResult = new Print();
             var ticTacToe = new TicTacToeCalculator(printResult);
-
-
+            
             //Act
             var result = ticTacToe.Play(inputs);
             ticTacToe.PrintResult(result);

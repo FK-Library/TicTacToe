@@ -6,7 +6,16 @@ namespace TicTacToe
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
+            var printResult = new Print();
+            var ticTacToe = new TicTacToeCalculator(printResult);
+
+            string input = "x|x|x|o|o|o|x|o|x";
+            var result = ticTacToe.Play(input);
+            ticTacToe.PrintResult(input);
+            ticTacToe.PrintResult(result);
+
+            Console.ReadLine();
         }
     }
 }
