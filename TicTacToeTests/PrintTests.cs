@@ -7,13 +7,16 @@ namespace TicTacToeTests
     public class PrintTests
     {
         [TestMethod]
-        public void Print_Always_ShowsResults()
+        [DataRow("x")]
+        [DataRow("O")]
+        [DataRow("x|x|x|x|x|x|x|x|x")]
+        public void Print_Always_ShowsResults( string input)
         {
             //Arrange
             var printService = new Print();
 
             //Act
-            printService.PrintResult("x");
+            printService.PrintResult("input");
 
             //Assert
             Assert.IsTrue(printService.IsPrinted);

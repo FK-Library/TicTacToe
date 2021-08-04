@@ -29,7 +29,6 @@ namespace TicTacToe
                 Console.WriteLine(output);
                 IsPrinted = true;
             }
-            _ = Console.ReadLine();
         }
     }
 }
