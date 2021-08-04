@@ -74,9 +74,9 @@ namespace TicTacToe
             return noWin;
         }
 
-        private void PrintResult(string input, IPrint print)
+        public void PrintResult(string input)
         {
-            print.PrintResult(input);
+            this.Print.PrintResult(input);
         }
 
         private bool Validate(string input)

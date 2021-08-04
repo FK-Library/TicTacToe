@@ -317,19 +317,38 @@ namespace TicTacToeTests
         }
 
         [TestCategory("Print Results")]
+        [DataRow("x|o|o|x|x|o|x|o|x")]
+        [TestMethod]
+        public void Play_Always_PrintsInputs(string inputs)
+        {
+            //Arrange
+            var printResult = new Print();
+            var ticTacToe = new TicTacToeCalculator(printResult);
+            _ = ticTacToe.Play(inputs);
+
+            //Act
+            ticTacToe.PrintResult(inputs);            
+
+            //Assert
+            Assert.IsTrue(printResult.IsPrinted);
+        }
+
+        [TestCategory("Print Results")]
         [DataRow("o|o|o|x|x|o|x|o|x")]
         [TestMethod]
-        public void Play_Always_PrintsOutput(string inputs)
+        public void Play_Always_PrintsResult(string inputs)
         {
             //Arrange
             var printResult = new Print();
             var ticTacToe = new TicTacToeCalculator(printResult);
 
-            //Act
-            var actual = ticTacToe.Play(inputs);
 
+            //Act
+            var result = ticTacToe.Play(inputs);
+            ticTacToe.PrintResult(result);
+            
             //Assert
-            //Assert.AreEqual(expectedWiner, actual);
+            Assert.IsTrue(printResult.IsPrinted);
         }
     }
 }
