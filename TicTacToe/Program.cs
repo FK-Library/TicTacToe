@@ -11,8 +11,12 @@ namespace TicTacToe
             var ticTacToe = new TicTacToeCalculator(printResult);
 
             string input = "x|x|x|o|o|o|x|o|x";
-            var result = ticTacToe.Play(input);
+             
+            var result = ticTacToe.Play(input);            
             ticTacToe.PrintResult(input);
+            Console.WriteLine("---------------");
+            
+            Console.WriteLine("Winner : ");
             ticTacToe.PrintResult(result);
 
             Console.ReadLine();

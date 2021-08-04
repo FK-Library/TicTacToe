@@ -19,7 +19,7 @@ namespace TicTacToe
                 {
                     Trace.Listeners.Add(new System.Diagnostics.DefaultTraceListener());
                     Console.Write(outputs[i]);
-                    if (i / 3 == 0)
+                    if (i == 2 || i == 5 || i == 8)
                         Console.WriteLine();
                 }
                 IsPrinted = true;
